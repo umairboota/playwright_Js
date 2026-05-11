@@ -10,4 +10,6 @@ test('Assertions', async ({page}) => {
 
 await expect(page).toHaveURL('https://demo.nopcommerce.com/register');
 
+await expect(page).toHaveTitle('nopCommerce demo store. Register');
+
 });
