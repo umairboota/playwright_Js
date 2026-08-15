@@ -14,7 +14,7 @@ await expect(page).toHaveTitle('Automation Exercise');
 
 // to be visible
 
-const logoElement = page.locator('.header-logo');
+// const logoElement = page.locator('.header-logo');
 // await expect(logoElement).toBeVisible();
 
 });
