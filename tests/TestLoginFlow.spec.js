@@ -2,7 +2,7 @@ import{test, expect} from '@playwright/test';
 
 test('Login Flow', async ({page}) => {
     await page.goto('https://www.saucedemo.com/');
-    expect(page).toHaveTitle('Swag Labs');
+    await expect(page).toHaveTitle('Swag Labs');
 
 });
 
