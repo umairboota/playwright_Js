@@ -15,6 +15,9 @@ test('Login flow with valid credentials', async ({page}) => {
     await page.click('#login-button');
 
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+    
+    await page.click('#react-burger-menu-btn');
+
 
 
 
