@@ -20,6 +20,5 @@ test('Login flow with valid credentials', async ({page}) => {
 
     await page.click('#logout_sidebar_link');
 
-
-
 });
+
