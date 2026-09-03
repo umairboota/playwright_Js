@@ -1,31 +1,37 @@
-// @ts-check
+
 import { test, expect } from '@playwright/test';
 
-test.beforeAll(async ({ context }) => {
+let context;
+let page;
+
+test.beforeAll(async ({ browser }) => {
+
+  context = await browser.newContext();
+
   await context.tracing.start({
     snapshots: true,
-    screenshots: true,
-    sources: true
+    screenshots: true
   });
-  
+
+  page = await context.newPage();
 });
 
+test.afterAll(async () => {
 
-
-
-test.afterAll(async ({ context }, testInfo) => {
   await context.tracing.stop({
-    path: testInfo.outputPath('trace.zip')
+    path: 'trace2.zip'
   });
 });
 
-test('has title', async ({ page }) => {
+test('has title', async () => {
+
   await page.goto('https://playwright.dev/');
 
   await expect(page).toHaveTitle(/Playwright/);
 });
 
-test('get started link', async ({ page }) => {
+test('get started link', async () => {
+
   await page.goto('https://playwright.dev/');
 
   await page.getByRole('link', { name: 'Get started' }).click();
