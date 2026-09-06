@@ -5,36 +5,50 @@
 
 import {test, expect} from '@playwright/test';
 
-test('Locators', async ({page}) => {
+// test('Locators', async ({page}) => {
 
-    await page.goto('https://demoblaze.com/index.html');
+//     await page.goto('https://demoblaze.com/index.html');
 
-    // click on the login button - id/property
+//     // click on the login button - id/property
 
-    // await page.locator('#login2').click(); - method 1
-    await page.click('#login2'); // method 2
+//     // await page.locator('#login2').click(); - method 1
+//     await page.click('#login2'); // method 2
 
-    // enter username - CSS selector
-    // await page.locator('#loginusername').fill('testuser'); // method 1
-    await page.fill('#loginusername', 'boota1'); // method 2
+//     // enter username - CSS selector
+//     // await page.locator('#loginusername').fill('testuser'); // method 1
+//     await page.fill('#loginusername', 'boota1'); // method 2
 
-    // enter password - XPath
+//     // enter password - XPath
 
-    // await page.locator('//input[@id="loginpassword"]').fill('testpassword'); // method 1
-    await page.fill('//input[@id="loginpassword"]', 'test123'); // method 2
+//     // await page.locator('//input[@id="loginpassword"]').fill('testpassword'); // method 1
+//     await page.fill('//input[@id="loginpassword"]', 'test123'); // method 2
 
-    // click on the login button in the modal - text selector
+//     // click on the login button in the modal - text selector
 
-    await page.click("//button[normalize-space()='Log in']"); // method 1
+//     await page.click("//button[normalize-space()='Log in']"); // method 1
 
-    // now we will perform the logout
+//     // now we will perform the logout
 
-    const logoutNav = await page.locator("//a[@id='logout2']");
-    await expect(logoutNav).toBeVisible();
+//     const logoutNav = await page.locator("//a[@id='logout2']");
+//     await expect(logoutNav).toBeVisible();
 
-    await logoutNav.click();
+//     await logoutNav.click();
 
-    await page.close();
+//     await page.close();
     
+
+// });
+
+test('learning Locators', async ({page})=>{
+
+    await page.goto('https://www.saucedemo.com/');
+    await page.pause();
+    
+    // by object property
+    await page.click('id=user-name');
+    await page.locator('id=user-name').fill('test_user');
+    await page.locator('id=user-name').fill('standard_user');
+
+// using css selector
 
 });
