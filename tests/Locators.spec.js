@@ -43,4 +43,12 @@ test('learning Locators', async ({page})=>{
 
     await page.goto('https://www.saucedemo.com/');
     await page.pause();
-})
+    
+    // by object property
+    await page.click('id=user-name');
+    await page.locator('id=user-name').fill('test_user');
+    await page.locator('id=user-name').fill('standard_user');
+
+// using css selector
+
+});
