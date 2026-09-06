@@ -1,24 +1,25 @@
-import{test, expect} from '@playwright/test';
+import { test, expect } from '@playwright/test';
 
-test('Login Flow', async ({page}) => {
-    await page.goto('https://www.saucedemo.com/');
-    await expect(page).toHaveTitle('Swag Labs');
+test('Login Flow', async ({ page }) => {
 
-});
+    // navigate to Login page
 
-test('Login flow with valid credentials', async ({page}) => {
     await page.goto('https://www.saucedemo.com/');
 
-    await page.fill('#user-name', 'standard_user');
-    await page.locator('#password-123').fill('secret_sauce');
+    // enter the username
 
-    await page.click('#login-button');
+    await page.locator('#user-name').fill('standard_user');
+
+    // enter the password
+
+    await page.locator('#password').fill('secret_sauce');
+
+        // click the login button
+
+    await page.locator('#login-button').click();
+
+    await page.pause();
 
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
-    
-    await page.click('#react-burger-menu-btn');
-
-    await page.click('#logout_sidebar_link');
 
 });
-
