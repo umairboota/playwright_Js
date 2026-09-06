@@ -18,4 +18,8 @@ test('Login Flow', async ({ page }) => {
 
     await page.locator('#login-button').click();
 
+    await page.pause();
+
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+
 });
