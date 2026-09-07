@@ -22,3 +22,14 @@ test('Login flow with valid credentials', async ({page}) => {
 
 });
 
+test('test for new application login', async({page})=>{
+
+    await page.goto('https://admin-demo.nopcommerce.com/login');
+
+    await page.locator('#Email').fill('admin@yourstore.com');
+
+    await page.fill('xpath=//input[@id="Password"]', 'admin');
+
+    await page.click();
+
+});
