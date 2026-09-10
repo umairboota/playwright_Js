@@ -23,3 +23,11 @@ test('Login Flow', async ({ page }) => {
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
 
 });
+
+test('Login the different application', async({page})=>{
+
+    await page.goto('https://demo.applitools.com/');
+
+    
+
+})
