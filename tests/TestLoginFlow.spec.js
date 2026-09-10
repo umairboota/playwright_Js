@@ -28,6 +28,12 @@ test('Login the different application', async({page})=>{
 
     await page.goto('https://demo.applitools.com/');
 
-    
+    await page.fill('#username', 'username1');
+
+    await page.fill('#password', 'password1');
+
+    await page.click('#log-in');
+
+    await expect(page).toHaveURL('https://demo.applitools.com/app.html');
 
 })
