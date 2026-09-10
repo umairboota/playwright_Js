@@ -36,4 +36,9 @@ test('Login the different application', async({page})=>{
 
     await expect(page).toHaveURL('https://demo.applitools.com/app.html');
 
-})
+});
+
+test('Loging 3rd application', async(page)=>{
+
+
+});
