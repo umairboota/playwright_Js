@@ -38,7 +38,7 @@ test('Login the different application', async({page})=>{
 
 });
 
-test('Loging 3rd application', async(page)=>{
+test('Loging 3rd application', async({page})=>{
 
     await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login');
 
