@@ -19,8 +19,11 @@ test('Assertions'
 
 test('test visibility of elements', async ({ page }) => {
 
-    // visibility
+    // visibility or hidden of elements
 
-    
+    await page.goto('https://kitchen.applitools.com/');
+
+    await expect(page.locator, '.chakra-image').toBeVisible();
+
 
 })
