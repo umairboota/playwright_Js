@@ -3,19 +3,19 @@ const { test, expect } = require('@playwright/test');
 test('Assertions'
     , async ({ page }) => {
 
-    // open App URL
-    await page.goto('https://kitchen.applitools.com/');
+        // open App URL
+        await page.goto('https://kitchen.applitools.com/');
 
-    // await page.pause();
+        // await page.pause();
 
-    await expect(page.locator('text= The Kitchen')).toHaveCount(1);
+        await expect(page.locator('text= The Kitchen')).toHaveCount(1);
 
-    if (await page.$('text= The Kitchen')) {
-        await expect(page.locator('text= The Kitchen')).toBeVisible();
-        await page.locator('text= The Kitchen').click();
-    }
+        if (await page.$('text= The Kitchen')) {
+            await expect(page.locator('text= The Kitchen')).toBeVisible();
+            await page.locator('text= The Kitchen').click();
+        }
 
-})
+    })
 
 test('test visibility of elements', async ({ page }) => {
 
@@ -24,6 +24,9 @@ test('test visibility of elements', async ({ page }) => {
     await page.goto('https://kitchen.applitools.com/');
 
     await expect(page.locator('div > img')).toBeVisible();
+
+    await expect(page.locator('div > img1')).not.toBeVisible();
+
 
 
 })
