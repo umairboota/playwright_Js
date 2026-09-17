@@ -64,5 +64,7 @@ test('test the attributes', async ({page})=>{
     await expect(page).toHaveURL('https://kitchen.applitools.com/');
     await expect(page).toHaveTitle(/.*Kitchen.*/);
 
+    await expect(page).toHaveScreenshot();
+
 
 })
