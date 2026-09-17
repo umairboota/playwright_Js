@@ -12,9 +12,8 @@ test('Assertions', async ({ page }) => {
     if (await page.$('text= The Kitchen')) {
         await expect(page.locator('text= The Kitchen')).toBeVisible();
         await page.locator('text= The Kitchen').click();
-
     }
 
-
+    
 
 })
