@@ -6,7 +6,7 @@ test('Assertions'
     // open App URL
     await page.goto('https://kitchen.applitools.com/');
 
-    await page.pause();
+    // await page.pause();
 
     await expect(page.locator('text= The Kitchen')).toHaveCount(1);
 
@@ -23,7 +23,7 @@ test('test visibility of elements', async ({ page }) => {
 
     await page.goto('https://kitchen.applitools.com/');
 
-    await expect(page.locator, '.chakra-image').toBeVisible();
+    await expect(page.locator('div > img')).toBeVisible();
 
 
 })
