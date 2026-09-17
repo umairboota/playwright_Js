@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test');
 
-test('Assertions', async ({ page }) => {
+test('Assertions'
+    , async ({ page }) => {
 
     // open App URL
     await page.goto('https://kitchen.applitools.com/');
@@ -13,6 +14,12 @@ test('Assertions', async ({ page }) => {
         await expect(page.locator('text= The Kitchen')).toBeVisible();
         await page.locator('text= The Kitchen').click();
     }
+
+})
+
+test('test visibility of elements', async ({ page }) => {
+
+    // visibility
 
     
 
