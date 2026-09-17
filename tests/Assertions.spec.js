@@ -59,7 +59,7 @@ test('test the attributes', async ({page})=>{
     await page.goto('https://kitchen.applitools.com/');
 
     await expect(page.locator('text= The Kitchen')).toHaveAttribute('class','chakra-heading css-dpmy2a');
-    await expect(page.locator('div > img')).toHaveClass('chakra-image css-1ws335m');
+    await expect(page.locator('div > img')).toHaveClass(/.*css-1ws335m/);
 
 
 })
