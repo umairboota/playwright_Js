@@ -19,6 +19,7 @@ test('login test', async ({ page }) => {
 
 test.only('HomePage', async({page})=>{
 
+    await page.pause();
 
 
 
