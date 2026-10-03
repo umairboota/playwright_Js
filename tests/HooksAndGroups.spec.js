@@ -12,6 +12,7 @@ test('login test', async ({ page }) => {
     await page.locator('[data-test="password"]').fill('scret_sauce');
     await expect(page.locator('[data-test="login-button"]')).toContainText('Login');
     await expect(page.locator('[data-test="login-credentials"]').getByRole('heading')).toContainText('Accepted usernames are:');
+    await page.locator('[data-test=login-button]').click();
 
 
 })
