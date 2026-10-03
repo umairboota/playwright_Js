@@ -6,18 +6,12 @@ test('login test', async ({ page }) => {
 
     await page.pause();
 
-
     await page.locator('[data-test="username"]').click();
     await page.locator('[data-test="username"]').fill('standard_user');
     await page.locator('[data-test="password"]').click();
     await page.locator('[data-test="password"]').fill('scret_sauce');
-    await page.getByText('Swag Labs').click();
-    await page.getByText('Swag Labs').click();
     await expect(page.locator('[data-test="login-button"]')).toContainText('Login');
     await expect(page.locator('[data-test="login-credentials"]').getByRole('heading')).toContainText('Accepted usernames are:');
-
-
-
 
 
 })
