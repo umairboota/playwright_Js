@@ -50,7 +50,7 @@ test('test the value is matched or not?', async ({ page }) => {
     await expect.soft(page.locator('text= The Kitchen')).not.toHaveText('The Kitchen2');
 
 
-
+ 
 })
 
 test('test the attributes', async ({page})=>{
