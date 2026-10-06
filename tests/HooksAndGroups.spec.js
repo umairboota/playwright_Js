@@ -17,7 +17,7 @@ test('login test', async ({ page }) => {
 
 })
 
-test.only('HomePage', async ({ page }) => {
+test('HomePage', async ({ page }) => {
 
     await page.goto('https://www.saucedemo.com/');
     await page.locator('[data-test="username"]').click();
@@ -27,13 +27,12 @@ test.only('HomePage', async ({ page }) => {
     await page.locator('[data-test="login-button"]').click();
     await page.getByText('Swag Labs').click();
     await page.getByRole('button', { name: 'Open Menu' }).click();
-    await page.locator('[data-test="logout-sidebar-link"]').click();
 
 
 })
 
 
-test.only('HomePage', async ({ page }) => {
+test.only('logout flow', async ({ page }) => {
 
     await page.goto('https://www.saucedemo.com/');
     await page.locator('[data-test="username"]').click();
@@ -45,5 +44,6 @@ test.only('HomePage', async ({ page }) => {
     await page.getByRole('button', { name: 'Open Menu' }).click();
     await page.locator('[data-test="logout-sidebar-link"]').click();
 
+    await page.waitForURL('https://www.saucedemo.com/')
 
 })
