@@ -16,6 +16,7 @@ test.beforeEach(async ({ page }) => {
 })
 
 
+
 test('HomePage', async ({ page }) => {
     await page.getByRole('button', { name: 'Open Menu' }).click();
 })
