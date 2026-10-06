@@ -15,18 +15,6 @@ test.beforeEach(async ({ page }) => {
 
 })
 
-// When you want to use the `.afterAll` to close the browser after all tests are executed,
-//  you have to create a browser context.
-
-    test.afterAll('Close out', async () => {
-        const browser = await chromium.launch();
-        const context = await browser.newContext();
-        const page = await context.newPage();
-
-        await page.close()
-    })
-
-
 
 test('HomePage', async ({ page }) => {
     await page.getByRole('button', { name: 'Open Menu' }).click();
