@@ -17,7 +17,7 @@ test.describe('All the Tests', () => {
 
     })
 
-    test.only('HomePage', async ({ page }) => {
+    test('HomePage', async ({ page }) => {
         await page.getByRole('button', { name: 'Open Menu' }).click();
     })
 
